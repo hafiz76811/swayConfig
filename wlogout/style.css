@@ -1,0 +1,30 @@
+* {
+	font-family: FontAwesome;
+	background-image: none;
+}
+
+window {
+	background-image: url('../background/wallpaper.jpg');
+	background-size: contain;
+}
+
+#lock, #logout, #suspend,
+#hibernate, #shutdown, #reboot {
+	margin: 20px;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	border: 7px solid #995CD0;
+	border-radius: 50px;
+	background-color: #330666;
+	background-size: 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#lock { background-image: url('icons/lock.svg') }
+#logout { background-image: url('icons/logout.svg') }
+#suspend { background-image: url('icons/suspend.svg') }
+#hibernate { background-image: url('icons/hibernate.svg') }
+#shutdown { background-image: url('icons/shutdown.svg') }
+#reboot { background-image: url('icons/reboot.svg') }

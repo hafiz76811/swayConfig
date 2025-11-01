@@ -1,0 +1,77 @@
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent; /* rgba(154, 92, 208, 0.2) */
+    border-bottom: none; /* 2px solid rgba(154, 92, 208, 0.5) */
+}
+
+#workspaces {
+    border: 3px solid #995CD0;
+    border-radius: 20px;
+    background-color: #995CD0; /* purple */
+}
+
+#workspaces button {
+    margin: 0 1px;
+    background-color: #593484; /* dark purple 1 */
+    color: #593484;
+    border-radius: 20px;
+}
+
+#workspaces button.active {
+    padding: 4px 25px;
+    background-color: #330666; /* dark purple 2 */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#workspaces button.urgent { color: #E53945; /* white */ }
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#bluetooth,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 15px;
+    color: #ffffff;
+    border: 3px solid #995CD0;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: rgba(154, 92, 208, 0.5); /* purple */
+}
+
+#custom-power { padding: 0px 10px 0px 15px; }
+
+#custom-power,
+#network.disconnected,
+#pulseaudio.muted,
+#power-profiles-daemon.power-saver,
+#idle_inhibitor.activated,
+#mpd.disconnected,
+#temperature.critical,
+#bluetooth.disabled,
+#battery.charging,
+#battery.plugged,
+#battery.critical:not(.charging){
+    color: #FFFFFF;
+    border: 2px solid #EC7744;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: rgba(236, 118, 68, 0.5) ; /* orange */
+}

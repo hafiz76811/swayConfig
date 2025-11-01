@@ -1,0 +1,19 @@
+stylesheet=style.css
+
+prompt=Search your package...
+
+width=45%
+height=45%
+lines=7
+
+normal_window=true
+allow_images=true
+image_size=45
+
+key_up=Alt-k
+key_down=Alt-j
+key_exit=Escape
+key_expand=Tab
+
+hide_scroll=true
+gtk_dark=true

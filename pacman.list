@@ -1,0 +1,123 @@
+Berikut adalah daftar lengkap perintah pacman (manajer paket bawaan Arch Linux dan turunannya seperti Manjaro, EndeavourOS, Garuda, dll), beserta fungsinya:
+
+
+---
+
+🧩 Dasar-dasar Pacman
+
+Perintah	Fungsi
+
+pacman -Syu	Sinkronisasi database dan update semua paket (update sistem penuh).
+pacman -Syyu	Paksa sinkronisasi database lalu update semua paket.
+pacman -S <paket>	Install paket baru dari repositori.
+pacman -Ss <kata>	Cari paket di repositori.
+pacman -Si <paket>	Tampilkan info detail tentang paket di repositori.
+pacman -R <paket>	Hapus paket (tanpa dependensi).
+pacman -Rs <paket>	Hapus paket dan dependensi yang tidak digunakan.
+pacman -Rns <paket>	Hapus paket, dependensi, dan file konfigurasi.
+pacman -U <file.pkg.tar.zst>	Install paket dari file lokal.
+pacman -Q	Tampilkan daftar semua paket yang terinstal.
+pacman -Qi <paket>	Tampilkan info detail paket yang terinstal.
+pacman -Qs <kata>	Cari paket yang terinstal.
+pacman -Qe	Daftar paket yang diinstal secara eksplisit (bukan dependensi).
+pacman -Qdt	Daftar paket yatim (dependensi yang tidak lagi diperlukan).
+pacman -Qtdq	Daftar hanya nama paket yatim.
+pacman -Qm	Daftar paket yang tidak berasal dari repositori resmi (misalnya AUR).
+pacman -Qk	Cek integritas paket yang terinstal.
+
+
+
+---
+
+⚙️ Sinkronisasi dan Repositori
+
+Perintah	Fungsi
+
+pacman -Sy	Sinkronisasi database paket (tanpa update paket).
+pacman -Fy	Update database file (untuk pencarian file dengan -F).
+pacman -F <file>	Cari paket yang menyediakan file tertentu.
+pacman -Sl	Daftar semua paket dalam repo.
+pacman -Sl <repo>	Daftar paket dalam repositori tertentu.
+pacman -Si <paket>	Info detail paket dari repositori.
+
+
+
+---
+
+🧹 Pemeliharaan Sistem
+
+Perintah	Fungsi
+
+pacman -Sc	Hapus cache lama (menyisakan versi terbaru).
+pacman -Scc	Hapus seluruh cache (paket lama dan baru).
+pacman -Rns $(pacman -Qtdq)	Hapus semua paket yatim secara otomatis.
+pacman -D --asdeps <paket>	Tandai paket sebagai dependensi.
+pacman -D --asexplicit <paket>	Tandai paket sebagai diinstal secara manual.
+
+
+
+---
+
+🧰 Debug & Informasi Tambahan
+
+Perintah	Fungsi
+
+pacman -V	Tampilkan versi pacman.
+pacman -Qkk	Cek semua file untuk paket yang rusak atau hilang.
+pacman -Qdt	Cek paket yatim.
+pacman -Qn	Daftar paket dari repo resmi.
+pacman -Qm	Daftar paket dari luar repo (AUR/manual).
+pacman -Qd	Daftar dependensi.
+pacman -Qo <file>	Cari paket mana yang memiliki file tersebut.
+
+
+
+---
+
+🧪 Opsi Tambahan Penting
+
+Opsi	Keterangan
+
+--needed	Lewati paket yang sudah terinstal (berguna saat install massal).
+--noconfirm	Jalankan tanpa konfirmasi (berbahaya jika tidak hati-hati).
+--overwrite <path>	Paksa install dan timpa file yang bentrok.
+--cachedir <dir>	Tentukan lokasi cache paket.
+
+
+
+---
+
+🔒 Database & Kunci
+
+Perintah	Fungsi
+
+pacman-key --init	Inisialisasi keyring.
+pacman-key --populate archlinux	Tambahkan key resmi Arch.
+pacman-key --refresh-keys	Perbarui semua key.
+
+
+
+---
+
+🧑‍💻 Contoh Berguna
+
+# Update sistem
+sudo pacman -Syu
+
+# Install paket baru
+sudo pacman -S firefox
+
+# Hapus paket + dependensi + config
+sudo pacman -Rns firefox
+
+# Cari paket di repositori
+pacman -Ss vlc
+
+# Cari paket terinstal
+pacman -Qs vlc
+
+# Bersihkan cache
+sudo pacman -Scc
+
+# Hapus semua paket yatim
+sudo pacman -Rns $(pacman -Qtdq)

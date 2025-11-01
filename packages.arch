@@ -1,0 +1,76 @@
+packages=(
+
+
+	# === sway ecosystem ===
+	sway
+	autotiling
+	nwg-bar
+	nwg-displays
+	sway-contrib
+	swaybg
+	swayidle
+	swayimg
+	swaylock
+	# swaylock-effects
+	# swaysome
+	# sway-backgrounds
+	# sway-tools
+	# wlroots
+	# waypipe
+	# xdg-desktop-portal-wlr
+	swaync
+	swayosd
+
+
+	# === hyprland support tools ===
+	sddm
+	wofi
+	waybar
+	# eww
+	# wlogout
+	kitty
+	picom
+	blueman
+	networkmanager
+	network-manager-applet
+	nm-connection-editor
+	brightnessctl
+	playerctl
+	pavucontrol
+	wl-clipboard
+	wf-recorder
+	grim slurp
+	ttf-roboto
+	ttf-font-awesome
+	otf-font-awesome
+	ttf-cascadia-code-nerd
+	awesome-terminal-fonts
+	power-profiles-daemon
+
+
+	# === command line tools ===
+	exa
+	axel
+	fastfetch
+	htop
+	gtop
+	trash-cli
+	zsh
+	vim
+	neovim
+	vim-jedi
+	git
+	tree
+	man
+	zip
+	unzip
+
+
+	# === gui tools for the user ===
+	mpv
+	dolphin
+	thunderbird
+	firefox
+
+
+)
